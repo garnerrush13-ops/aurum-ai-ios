@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aurum-ai-ios
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    healthCheckPath: /
+    envVars:
+      - key: AURUM_NO_BROWSER
+        value: "1"
